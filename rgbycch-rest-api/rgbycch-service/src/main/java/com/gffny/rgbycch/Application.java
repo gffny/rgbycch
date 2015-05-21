@@ -1,3 +1,4 @@
-package edu.harvard.huit.ace;
+package com.gffny.rgbycch;
 
-public interface Application {}
+public interface Application {
+}

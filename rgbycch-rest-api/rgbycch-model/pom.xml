@@ -1,17 +1,16 @@
 <?xml version="1.0"?>
-<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>com.gffny</groupId>
-    <artifactId>rgbycch-rest-api</artifactId>
-    <version>1.0-SNAPSHOT</version>
-  </parent>
-  <groupId>com.gffny</groupId>
-  <artifactId>rgbycch-model</artifactId>
-  <version>1.0-SNAPSHOT</version>
-  <name>rugby coach model</name>
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.gffny</groupId>
+		<artifactId>rgbycch-rest-api</artifactId>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
+	<groupId>com.gffny.model</groupId>
+	<artifactId>rgbycch-model</artifactId>
+	<name>rugby coach model</name>
+	<url>http://www.gffny.com</url>
+	<packaging>jar</packaging>
 </project>

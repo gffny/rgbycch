@@ -5,6 +5,7 @@ import java.util.Map;
 import javax.sql.DataSource;
 
 import org.hibernate.dialect.Dialect;
+import org.opensaml.xml.encryption.EncryptionException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -26,14 +27,13 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.transaction.annotation.TransactionManagementConfigurer;
 
 /**
- * 
- * @author John D. Gaffney | Isobar US
+ * @author John D. Gaffney | gffny.com
  *
  */
 @Configuration
 @EnableTransactionManagement(proxyTargetClass = true)
-@ComponentScan(basePackages = "com.gffny.rgbycch.dao", includeFilters = @Filter({ Repository.class }))
-@EnableJpaRepositories(basePackages = "com.gffny.rgbycch.dao")
+@ComponentScan(basePackages = "com.gffny.rgbycch.dao.impl", includeFilters = @Filter({ Repository.class }))
+@EnableJpaRepositories(basePackages = "com.gffny.rgbycch.dao.impl")
 public class JpaConfig implements TransactionManagementConfigurer {
 
     /** */
@@ -69,7 +69,6 @@ public class JpaConfig implements TransactionManagementConfigurer {
 	dataSource.setUrl(url);
 	dataSource.setUsername(username);
 	dataSource.setPassword(password);
-
 	return dataSource;
     }
 
@@ -113,7 +112,7 @@ public class JpaConfig implements TransactionManagementConfigurer {
 	HibernateJpaVendorAdapter hibernateJpaVendorAdapter = new HibernateJpaVendorAdapter();
 	hibernateJpaVendorAdapter.setDatabasePlatform(dialect);
 	entityManagerFactoryBean.setJpaVendorAdapter(hibernateJpaVendorAdapter);
-	entityManagerFactoryBean.setPersistenceUnitName("acePU");
+	entityManagerFactoryBean.setPersistenceUnitName("rgbycchPU");
 
 	Map<String, Object> jpaProperties = entityManagerFactoryBean
 		.getJpaPropertyMap();

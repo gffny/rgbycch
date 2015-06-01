@@ -1,0 +1,187 @@
+/**
+ * 
+ */
+package com.gffny.rgbycch.dao;
+
+import static org.junit.Assert.fail;
+
+import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.AbstractTransactionalJUnit4SpringContextTests;
+import org.springframework.test.context.transaction.TransactionConfiguration;
+
+import com.gffny.rgbycch.config.ApplicationConfig;
+
+/**
+ * @author John D. Gaffney | gffny.com
+ *
+ */
+@TransactionConfiguration(defaultRollback = true)
+@ContextConfiguration(classes = { ApplicationConfig.class })
+public class GenericDaoJpaImplTest extends
+	AbstractTransactionalJUnit4SpringContextTests {
+
+    @Autowired
+    private ClubDao clubDao;
+
+    /**
+     * Test method for
+     * {@link com.gffny.rgbycch.dao.impl.GenericDaoJpaImpl#countAll()}.
+     */
+    @Test
+    public void testCountAll() {
+	long count = clubDao.countAll();
+	System.out.println(count);
+    }
+
+    /**
+     * Test method for
+     * {@link com.gffny.rgbycch.dao.impl.GenericDaoJpaImpl#getAll()}.
+     */
+    @Test
+    public void testGetAll() {
+	fail("Not yet implemented");
+    }
+
+    /**
+     * Test method for
+     * {@link com.gffny.rgbycch.dao.impl.GenericDaoJpaImpl#findById(java.io.Serializable)}
+     * .
+     */
+    @Test
+    public void testFindById() {
+	fail("Not yet implemented");
+    }
+
+    /**
+     * Test method for
+     * {@link com.gffny.rgbycch.dao.impl.GenericDaoJpaImpl#findNewInstanceById(java.io.Serializable)}
+     * .
+     */
+    @Test
+    public void testFindNewInstanceById() {
+	fail("Not yet implemented");
+    }
+
+    /**
+     * Test method for
+     * {@link com.gffny.rgbycch.dao.impl.GenericDaoJpaImpl#persist(java.lang.Object)}
+     * .
+     */
+    @Test
+    public void testPersist() {
+	fail("Not yet implemented");
+    }
+
+    /**
+     * Test method for
+     * {@link com.gffny.rgbycch.dao.impl.GenericDaoJpaImpl#merge(java.lang.Object)}
+     * .
+     */
+    @Test
+    public void testMerge() {
+	fail("Not yet implemented");
+    }
+
+    /**
+     * Test method for
+     * {@link com.gffny.rgbycch.dao.impl.GenericDaoJpaImpl#delete(java.io.Serializable)}
+     * .
+     */
+    @Test
+    public void testDelete() {
+	fail("Not yet implemented");
+    }
+
+    /**
+     * Test method for
+     * {@link com.gffny.rgbycch.dao.impl.GenericDaoJpaImpl#findByNamedQuery(java.lang.String, java.util.Map, int, int)}
+     * .
+     */
+    @Test
+    public void testFindByNamedQueryStringMapOfStringQIntInt() {
+	fail("Not yet implemented");
+    }
+
+    /**
+     * Test method for
+     * {@link com.gffny.rgbycch.dao.impl.GenericDaoJpaImpl#findByNamedQuery(java.lang.String, java.util.Map, int)}
+     * .
+     */
+    @Test
+    public void testFindByNamedQueryStringMapOfStringQInt() {
+	fail("Not yet implemented");
+    }
+
+    /**
+     * Test method for
+     * {@link com.gffny.rgbycch.dao.impl.GenericDaoJpaImpl#findByNamedQuery(java.lang.String, java.util.Map)}
+     * .
+     */
+    @Test
+    public void testFindByNamedQueryStringMapOfStringQ() {
+	fail("Not yet implemented");
+    }
+
+    /**
+     * Test method for
+     * {@link com.gffny.rgbycch.dao.impl.GenericDaoJpaImpl#findSingleByNamedQuery(java.lang.String, java.util.Map)}
+     * .
+     */
+    @Test
+    public void testFindSingleByNamedQuery() {
+	fail("Not yet implemented");
+    }
+
+    /**
+     * Test method for
+     * {@link com.gffny.rgbycch.dao.impl.GenericDaoJpaImpl#countNamedQuery(java.lang.String, java.util.Map)}
+     * .
+     */
+    @Test
+    public void testCountNamedQuery() {
+	fail("Not yet implemented");
+    }
+
+    /**
+     * Test method for
+     * {@link com.gffny.rgbycch.dao.impl.GenericDaoJpaImpl#findStringValueByNamedQuery(java.lang.String, java.util.Map)}
+     * .
+     */
+    @Test
+    public void testFindStringValueByNamedQuery() {
+	fail("Not yet implemented");
+    }
+
+    /**
+     * Test method for
+     * {@link com.gffny.rgbycch.dao.impl.GenericDaoJpaImpl#getPrimaryKey(java.lang.Object)}
+     * .
+     */
+    @Test
+    public void testGetPrimaryKey() {
+	fail("Not yet implemented");
+    }
+
+    /**
+     * Test method for
+     * {@link com.gffny.rgbycch.dao.impl.GenericDaoJpaImpl#findLongValueByNamedQuery(java.lang.String, java.util.Map)}
+     * .
+     */
+    @Test
+    public void testFindLongValueByNamedQuery() {
+	fail("Not yet implemented");
+    }
+
+    /**
+     * Test method for
+     * {@link com.gffny.rgbycch.dao.impl.GenericDaoJpaImpl#findIntValueByNamedQuery(java.lang.String, java.util.Map)}
+     * .
+     */
+    @Test
+    public void testFindIntValueByNamedQuery() {
+	fail("Not yet implemented");
+    }
+
+}

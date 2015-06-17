@@ -3,15 +3,13 @@
  */
 package com.gffny.rgbycch.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
 
 /**
  * @author John D. Gaffney | gffny.com
  *
  */
-@Entity
-@Table(name = "t_club")
+// @Entity
+// @Table(name = "t_club")
 public class Club extends BaseEntity {
 
     private String name;

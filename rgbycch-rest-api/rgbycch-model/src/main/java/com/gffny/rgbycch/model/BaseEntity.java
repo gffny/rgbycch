@@ -1,8 +1,5 @@
 package com.gffny.rgbycch.model;
 
-import javax.persistence.Column;
-import javax.persistence.Id;
-
 public abstract class BaseEntity {
 
     private Integer id;
@@ -11,8 +8,8 @@ public abstract class BaseEntity {
 	super();
     }
 
-    @Id
-    @Column(name = "pk")
+    // @Id
+    // @Column(name = "pk")
     public Integer getId() {
 	return id;
     }

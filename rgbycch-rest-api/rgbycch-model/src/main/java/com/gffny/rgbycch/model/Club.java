@@ -3,9 +3,7 @@
  */
 package com.gffny.rgbycch.model;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**
@@ -14,18 +12,20 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "t_club")
-public class Club {
+public class Club extends BaseEntity {
 
-    private Integer id;
+    private String name;
 
-    @Id
-    @Column(name = "pk")
-    public Integer getId() {
-	return id;
+    public String getName() {
+	return this.name;
     }
 
-    public void setId(Integer id) {
-	this.id = id;
+    public void setName(String name) {
+	this.name = name;
     }
 
+    @Override
+    public String name() {
+	return getName();
+    }
 }

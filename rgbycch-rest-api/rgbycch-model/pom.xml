@@ -8,12 +8,12 @@
 		<artifactId>rgbycch-rest-api</artifactId>
 		<version>1.0-SNAPSHOT</version>
 	</parent>
-	<groupId>com.gffny</groupId>
 	<artifactId>rgbycch-model</artifactId>
 	<name>rugby coach model</name>
 	<url>http://www.gffny.com</url>
 	<packaging>jar</packaging>
-	<dependencies>		<dependency>
+	<dependencies>		
+		<dependency>
 			<artifactId>solr-core</artifactId>
 			<groupId>org.apache.solr</groupId>
 			<version>5.1.0</version>

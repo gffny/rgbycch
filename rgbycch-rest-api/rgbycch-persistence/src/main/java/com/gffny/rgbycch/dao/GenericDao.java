@@ -60,7 +60,12 @@ public interface GenericDao<T, PK extends Serializable> {
      */
     public abstract T findById(PK id);
 
-    T findNewInstanceById(PK id);
+    /**
+     * 
+     * @param id
+     * @return
+     */
+    public abstract T findNewInstanceById(PK id);
 
     /**
      * 
@@ -140,6 +145,12 @@ public interface GenericDao<T, PK extends Serializable> {
     public abstract long findLongValueByNamedQuery(String name,
 	    Map<String, ?> params);
 
+    /**
+     * 
+     * @param name
+     * @param params
+     * @return
+     */
     public abstract int findIntValueByNamedQuery(String name,
 	    Map<String, ?> params);
 

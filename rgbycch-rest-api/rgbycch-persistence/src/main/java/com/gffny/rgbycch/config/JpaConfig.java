@@ -69,6 +69,7 @@ public class JpaConfig implements TransactionManagementConfigurer {
 	dataSource.setUrl(url);
 	dataSource.setUsername(username);
 	dataSource.setPassword(password);
+
 	return dataSource;
     }
 
@@ -105,7 +106,8 @@ public class JpaConfig implements TransactionManagementConfigurer {
 	LOG.debug("creating instance of LocalContainerEntityManagerFactoryBean (emf)");
 	LocalContainerEntityManagerFactoryBean entityManagerFactoryBean = new LocalContainerEntityManagerFactoryBean();
 	entityManagerFactoryBean.setDataSource(dataSource());
-	entityManagerFactoryBean.setPackagesToScan("com.gffny.rgbycch");
+	entityManagerFactoryBean.setPackagesToScan("com.gffny.rgbycch.model");
+
 	LOG.debug(
 		"creating instance of HibernateJpaVendorAdapter with dialect {}",
 		dialect);

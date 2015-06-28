@@ -16,7 +16,4 @@ import com.gffny.rgbycch.model.Club;
 public class ClubDaoJpaImpl extends GenericDaoJpaImpl<Club, Integer> implements
 	ClubDao {
 
-    public ClubDaoJpaImpl() {
-	System.out.println("test");
-    }
 }

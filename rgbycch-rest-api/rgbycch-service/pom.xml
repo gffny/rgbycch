@@ -28,4 +28,62 @@
 		</dependency>
 	</dependencies>
 	<packaging>war</packaging>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.eclipse.jetty</groupId>
+				<artifactId>jetty-maven-plugin</artifactId>
+				<configuration>
+	            	<skip>false</skip>
+					<scanIntervalSeconds>1</scanIntervalSeconds>
+					<!-- Context path is / by default -->
+					<!-- <webApp> -->
+					<!-- <contextPath>/${project.artifactId}</contextPath> -->
+					<!-- </webApp> -->
+					<connectors>
+						<!-- or org.eclipse.jetty.server.bio.SocketConnector to avoid file locking on windows -->
+						<connector implementation="org.eclipse.jetty.server.nio.SelectChannelConnector">
+							<port>8080</port>
+						</connector>
+					</connectors>
+			        <webAppConfig>
+						<jettyEnvXml>${basedir}/jetty-dev.xml</jettyEnvXml>
+			            <resourceBases>
+			                <!--<resourceBase>${basedir}/target/rgbycch-service-1.0-SNAPSHOT</resourceBase>-->
+			                <resourceBase>${basedir}/src/main/webapp</resourceBase>
+			            </resourceBases>
+			        </webAppConfig>
+				</configuration>
+				<dependencies>
+					<dependency>
+						<groupId>com.oracle</groupId>
+						<artifactId>ojdbc7</artifactId>
+						<version>${ojdbc7.version}</version>
+					</dependency>
+					<dependency>
+						<groupId>com.jolbox</groupId>
+						<artifactId>bonecp</artifactId>
+						<version>0.8.0.RELEASE</version>
+					</dependency>
+				</dependencies>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<configuration>
+					<warSourceExcludes>assets/</warSourceExcludes>
+					<attachClasses>true</attachClasses>
+					<archiveClasses>true</archiveClasses>
+					<webResources>
+						<resource>
+							<directory>${project.build.directory}/rgbycch-service-1.0-SNAPSHOT/</directory>
+							<filtering>false</filtering>
+							<targetPath>/</targetPath>
+						</resource>
+					</webResources>
+					<warName>rgbycch-${project.version}</warName>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>

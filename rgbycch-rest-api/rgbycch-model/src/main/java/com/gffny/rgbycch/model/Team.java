@@ -3,9 +3,14 @@
  */
 package com.gffny.rgbycch.model;
 
-import javax.persistence.Column;
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
 /**
@@ -14,18 +19,24 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "t_team")
-public class Team {
+public class Team extends BaseEntity {
 
-    private Integer id;
+    private static final long serialVersionUID = -5461181250703403428L;
+    private List<Player> teamMemberList;
 
-    @Id
-    @Column(name = "pk")
-    public Integer getId() {
-	return id;
+    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinTable(name = "t_team_member", joinColumns = { @JoinColumn(name = "pk") }, inverseJoinColumns = { @JoinColumn(name = "tm_fk") })
+    public List<Player> getTeamMemberList() {
+	return teamMemberList;
     }
 
-    public void setId(Integer id) {
-	this.id = id;
+    public void setTeamMemberList(List<Player> teamMemberList) {
+	this.teamMemberList = teamMemberList;
     }
 
+    @Override
+    public String name() {
+	// TODO Auto-generated method stub
+	return null;
+    }
 }

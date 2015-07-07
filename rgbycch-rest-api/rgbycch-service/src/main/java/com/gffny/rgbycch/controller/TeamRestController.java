@@ -19,26 +19,25 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
-import com.gffny.rgbycch.model.Player;
-import com.gffny.rgbycch.service.PlayerService;
+import com.gffny.rgbycch.model.Team;
+import com.gffny.rgbycch.service.TeamService;
 
 /**
  * @author John D. Gaffney | gffny.com
  *
  */
 @Controller
-public class PlayerRestController extends V1RestController {
+public class TeamRestController extends V1RestController {
 
     @Autowired
-    private PlayerService playerService;
+    private TeamService teamService;
 
     public static final String[] ALLOWED_FIELDS;
 
     static {
 	List<String> allowedFields = new ArrayList<String>();
-	allowedFields.addAll(Arrays.asList(new String[] { "firstName",
-		"lastName", "nickName", "primaryPosition", "secondaryPosition",
-		"tertiaryPosition" }));
+	allowedFields.addAll(Arrays.asList(new String[] { "name",
+		"teamMemberList" }));
 	ALLOWED_FIELDS = allowedFields
 		.toArray(new String[allowedFields.size()]);
     }
@@ -48,13 +47,13 @@ public class PlayerRestController extends V1RestController {
      * @param id
      * @return
      */
-    @RequestMapping(value = "/player/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = "/team/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     @ResponseStatus(value = HttpStatus.OK)
-    public Player getPlayer(@PathVariable Integer id) {
-	LOG.debug("get player with id {}", id);
-	Player player = playerService.findById(id);
-	return player;
+    public Team getPlayer(@PathVariable Integer id) {
+	LOG.debug("get team with id {}", id);
+	Team team = teamService.findById(id);
+	return team;
     }
 
     /**
@@ -63,12 +62,11 @@ public class PlayerRestController extends V1RestController {
      * @param player
      * @return
      */
-    @RequestMapping(value = "/player/{id}", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = "/team/{id}", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     @ResponseStatus(value = HttpStatus.OK)
-    public Player setPlayer(@PathVariable Integer id, @RequestBody Player player) {
-	LOG.debug("update player with id {}, firstName {}, surname {}", id,
-		player.getFirstName(), player.getLastName());
+    public Team setPlayer(@PathVariable Integer id, @RequestBody Team team) {
+	LOG.debug("update team with id {}, name {}", id, team.name());
 	throw new NotImplementedException();
     }
 }

@@ -3,10 +3,17 @@
  */
 package com.gffny.rgbycch.model;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 import javax.validation.constraints.NotNull;
@@ -33,6 +40,7 @@ public class Player extends BaseEntity {
     private PlayerPosition primaryPosition;
     private PlayerPosition secondaryPosition;
     private PlayerPosition tertiaryPosition;
+    private List<Team> teamList;
 
     @Size(max = 60)
     @NotBlank
@@ -96,6 +104,16 @@ public class Player extends BaseEntity {
 
     public void setTertiaryPosition(PlayerPosition tertiaryPosition) {
 	this.tertiaryPosition = tertiaryPosition;
+    }
+
+    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinTable(name = "t_team_member", joinColumns = { @JoinColumn(name = "pk") }, inverseJoinColumns = { @JoinColumn(name = "plyr_fk") })
+    public List<Team> getTeamList() {
+	return teamList;
+    }
+
+    public void setTeamList(List<Team> teamList) {
+	this.teamList = teamList;
     }
 
     @Transient

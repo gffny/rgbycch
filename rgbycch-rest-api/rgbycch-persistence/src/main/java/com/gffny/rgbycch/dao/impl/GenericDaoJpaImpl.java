@@ -29,6 +29,7 @@ import com.gffny.rgbycch.dao.GenericDao;
  * @param <T>
  * @param <PK>
  */
+@SuppressWarnings("unchecked")
 @Repository
 @Transactional(noRollbackFor = NoResultException.class)
 public abstract class GenericDaoJpaImpl<T, PK extends Serializable> implements

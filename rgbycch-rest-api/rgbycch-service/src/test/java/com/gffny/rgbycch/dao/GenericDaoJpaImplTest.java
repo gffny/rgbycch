@@ -12,18 +12,22 @@ import org.springframework.test.context.junit4.AbstractTransactionalJUnit4Spring
 import org.springframework.test.context.transaction.TransactionConfiguration;
 
 import com.gffny.rgbycch.config.ApplicationConfig;
+import com.gffny.rgbycch.model.Club;
 
 /**
  * @author John D. Gaffney | gffny.com
  *
  */
-@TransactionConfiguration(defaultRollback = true)
+@TransactionConfiguration(defaultRollback = false)
 @ContextConfiguration(classes = { ApplicationConfig.class })
 public class GenericDaoJpaImplTest extends
 	AbstractTransactionalJUnit4SpringContextTests {
 
     @Autowired
     private ClubDao clubDao;
+
+    @Autowired
+    private TeamDao teamDao;
 
     /**
      * Test method for
@@ -71,6 +75,10 @@ public class GenericDaoJpaImplTest extends
      */
     @Test
     public void testPersist() {
+	Club mitRugby = new Club();
+	mitRugby.setName("MIT Rugby");
+	Club persisted = clubDao.persist(mitRugby);
+	System.out.println(persisted.getId());
 	fail("Not yet implemented");
     }
 

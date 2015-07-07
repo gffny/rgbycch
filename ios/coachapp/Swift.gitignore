@@ -15,13 +15,25 @@ DerivedData
 !default.mode2v3
 *.perspectivev3
 !default.perspectivev3
-xcuserdata
+#xcuserdata
+#*.xcuserdata	
 
 ## Other
-*.xccheckout
+#*.xccheckout
+#*.moved-aside
+#*.xcuserstate
+#*.xcscmblueprint
+
+# Xcode
+.DS_Store
+*.xcworkspace/
+!default.xcworkspace
+profile
 *.moved-aside
-*.xcuserstate
-*.xcscmblueprint
+DerivedData
+.idea/
+# Pods - for those of you who use CocoaPods
+Pods
 
 ## Obj-C/Swift specific
 *.hmap

@@ -13,6 +13,8 @@
 		508927141B4C40270089CCE1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 508927131B4C40270089CCE1 /* Images.xcassets */; };
 		508927171B4C40270089CCE1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 508927151B4C40270089CCE1 /* LaunchScreen.xib */; };
 		508927231B4C40270089CCE1 /* coachappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508927221B4C40270089CCE1 /* coachappTests.swift */; };
+		50B8DB441B4D80A100495B09 /* FieldRepresentation.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50B8DB421B4D80A100495B09 /* FieldRepresentation.xib */; };
+		50B8DB491B4D832000495B09 /* FieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B8DB481B4D832000495B09 /* FieldView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		5089271C1B4C40270089CCE1 /* coachappTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = coachappTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		508927211B4C40270089CCE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		508927221B4C40270089CCE1 /* coachappTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coachappTests.swift; sourceTree = "<group>"; };
+		50B8DB431B4D80A100495B09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = coachapp/Base.lproj/FieldRepresentation.xib; sourceTree = "<group>"; };
+		50B8DB481B4D832000495B09 /* FieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,7 @@
 		508927071B4C40270089CCE1 /* coachapp */ = {
 			isa = PBXGroup;
 			children = (
+				50B8DB471B4D82E000495B09 /* FieldView */,
 				5089270A1B4C40270089CCE1 /* AppDelegate.swift */,
 				5089270E1B4C40270089CCE1 /* GameRecordViewController.swift */,
 				508927101B4C40270089CCE1 /* Main.storyboard */,
@@ -110,6 +115,15 @@
 				508927211B4C40270089CCE1 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		50B8DB471B4D82E000495B09 /* FieldView */ = {
+			isa = PBXGroup;
+			children = (
+				50B8DB421B4D80A100495B09 /* FieldRepresentation.xib */,
+				50B8DB481B4D832000495B09 /* FieldView.swift */,
+			);
+			name = FieldView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +210,7 @@
 				508927121B4C40270089CCE1 /* Main.storyboard in Resources */,
 				508927171B4C40270089CCE1 /* LaunchScreen.xib in Resources */,
 				508927141B4C40270089CCE1 /* Images.xcassets in Resources */,
+				50B8DB441B4D80A100495B09 /* FieldRepresentation.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5089270F1B4C40270089CCE1 /* GameRecordViewController.swift in Sources */,
+				50B8DB491B4D832000495B09 /* FieldView.swift in Sources */,
 				5089270B1B4C40270089CCE1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -251,6 +267,15 @@
 				508927161B4C40270089CCE1 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		50B8DB421B4D80A100495B09 /* FieldRepresentation.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				50B8DB431B4D80A100495B09 /* Base */,
+			);
+			name = FieldRepresentation.xib;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

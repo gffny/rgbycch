@@ -31,6 +31,13 @@
                                     <rect key="frame" x="304" y="0.0" width="720" height="600"/>
                                 </variation>
                             </view>
+                            <view hidden="YES" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2zb-Fc-Es3" userLabel="Incident View" customClass="IncidentRecordView" customModule="coachapp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" red="1" green="0.89036412919999997" blue="0.84249516739999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="304" y="0.0" width="720" height="600"/>
+                                </variation>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.85558022543070189" green="1" blue="0.81772276960250811" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
@@ -38,16 +45,20 @@
                             <mask key="subviews">
                                 <exclude reference="mEQ-02-ork"/>
                                 <exclude reference="vOR-UL-6Rd"/>
+                                <exclude reference="2zb-Fc-Es3"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
                             <mask key="subviews">
                                 <include reference="mEQ-02-ork"/>
                                 <include reference="vOR-UL-6Rd"/>
+                                <include reference="2zb-Fc-Es3"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="fieldView" destination="mEQ-02-ork" id="UeP-oE-Ing"/>
+                        <outlet property="incidentRecordView" destination="2zb-Fc-Es3" id="Epc-DY-phL"/>
                         <outlet property="touchView" destination="vOR-UL-6Rd" id="8gP-bH-vBB"/>
                     </connections>
                 </viewController>

@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F1077" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="E2m-NC-zRg">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Game Record View Controller-->
@@ -14,45 +13,47 @@
                         <viewControllerLayoutGuide type="bottom" id="Ua5-fS-eiv"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="EBa-wq-9cm">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="topRight" translatesAutoresizingMaskIntoConstraints="NO" id="mEQ-02-ork" customClass="FieldView" customModule="coachapp" customModuleProvider="target">
+                            <view multipleTouchEnabled="YES" contentMode="topRight" translatesAutoresizingMaskIntoConstraints="NO" id="mEQ-02-ork" customClass="FieldView" customModule="coachapp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <variation key="heightClass=regular-widthClass=regular" ambiguous="YES" misplaced="YES">
-                                    <rect key="frame" x="84" y="0.0" width="716" height="600"/>
+                                <gestureRecognizers/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="304" y="0.0" width="720" height="600"/>
+                                </variation>
+                            </view>
+                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vOR-UL-6Rd" userLabel="Touch View">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="304" y="0.0" width="720" height="600"/>
                                 </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.85558022543070189" green="1" blue="0.81772276960250811" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="mEQ-02-ork" firstAttribute="leading" secondItem="EBa-wq-9cm" secondAttribute="leadingMargin" constant="68" id="tL4-q0-dHT"/>
-                        </constraints>
+                        <gestureRecognizers/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="mEQ-02-ork"/>
-                            </mask>
-                            <mask key="constraints">
-                                <exclude reference="tL4-q0-dHT"/>
+                                <exclude reference="vOR-UL-6Rd"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
                             <mask key="subviews">
                                 <include reference="mEQ-02-ork"/>
-                            </mask>
-                            <mask key="constraints">
-                                <include reference="tL4-q0-dHT"/>
+                                <include reference="vOR-UL-6Rd"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="fieldView" destination="mEQ-02-ork" id="yLP-O7-lcx"/>
+                        <outlet property="touchView" destination="vOR-UL-6Rd" id="8gP-bH-vBB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6k9-m6-1Hu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="817.5" y="-58.5"/>
+            <point key="canvasLocation" x="1170" y="-201"/>
         </scene>
     </scenes>
 </document>

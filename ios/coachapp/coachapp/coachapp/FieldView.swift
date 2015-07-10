@@ -11,13 +11,8 @@ import UIKit
 @IBDesignable class FieldView: UIView {
 
     // Our custom view from the XIB file
-    var view: UIView!
-
-    @IBOutlet weak var fieldName: UILabel!
-
-//    @IBAction func buttonPressed(sender: AnyObject) {
-//        // do something
-//    }
+    weak var view: UIView!
+    weak var fieldRepresentation: UIImageView!
 
     override init(frame: CGRect) {
         // 1. setup any properties here
@@ -37,17 +32,16 @@ import UIKit
 
         // 3. Setup view from .xib file
         xibSetup()
+
     }
 
     func xibSetup() {
-        view = loadViewFromNib()
 
+        view = loadViewFromNib()
         // use bounds not frame or it'll be offset
         view.frame = bounds
-
         // Make the view stretch with containing view
         view.autoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleHeight
-
         // Adding custom subview on top of our view (over any custom drawing > see note below)
         addSubview(view)
     }

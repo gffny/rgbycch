@@ -12,6 +12,10 @@
 		5029B0141B504C9500B7F817 /* IncidentRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5029B0101B504C9500B7F817 /* IncidentRecordView.swift */; };
 		5029B0151B504C9500B7F817 /* IncidentRecordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5029B0111B504C9500B7F817 /* IncidentRecordView.xib */; };
 		5029B0171B504CBB00B7F817 /* GameRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5029B0161B504CBB00B7F817 /* GameRecordViewController.swift */; };
+		5029B01C1B52C36D00B7F817 /* MatchIncident.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5029B01B1B52C36D00B7F817 /* MatchIncident.swift */; };
+		5029B01F1B52C50200B7F817 /* IncidentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5029B01E1B52C50200B7F817 /* IncidentType.swift */; };
+		5029B0211B52C51C00B7F817 /* IncidentResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5029B0201B52C51C00B7F817 /* IncidentResult.swift */; };
+		5029B0231B52C60F00B7F817 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5029B0221B52C60F00B7F817 /* Player.swift */; };
 		5089270B1B4C40270089CCE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5089270A1B4C40270089CCE1 /* AppDelegate.swift */; };
 		508927121B4C40270089CCE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 508927101B4C40270089CCE1 /* Main.storyboard */; };
 		508927141B4C40270089CCE1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 508927131B4C40270089CCE1 /* Images.xcassets */; };
@@ -35,6 +39,10 @@
 		5029B0101B504C9500B7F817 /* IncidentRecordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IncidentRecordView.swift; path = views/IncidentRecordView.swift; sourceTree = "<group>"; };
 		5029B0111B504C9500B7F817 /* IncidentRecordView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = IncidentRecordView.xib; path = views/IncidentRecordView.xib; sourceTree = "<group>"; };
 		5029B0161B504CBB00B7F817 /* GameRecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameRecordViewController.swift; path = viewcontrollers/GameRecordViewController.swift; sourceTree = "<group>"; };
+		5029B01B1B52C36D00B7F817 /* MatchIncident.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatchIncident.swift; path = domain/MatchIncident.swift; sourceTree = "<group>"; };
+		5029B01E1B52C50200B7F817 /* IncidentType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IncidentType.swift; path = domain/IncidentType.swift; sourceTree = "<group>"; };
+		5029B0201B52C51C00B7F817 /* IncidentResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IncidentResult.swift; path = domain/IncidentResult.swift; sourceTree = "<group>"; };
+		5029B0221B52C60F00B7F817 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Player.swift; path = domain/Player.swift; sourceTree = "<group>"; };
 		508927051B4C40270089CCE1 /* coachapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = coachapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		508927091B4C40270089CCE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5089270A1B4C40270089CCE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +89,17 @@
 			name = viewcontrollers;
 			sourceTree = "<group>";
 		};
+		5029B01D1B52C4D700B7F817 /* domain */ = {
+			isa = PBXGroup;
+			children = (
+				5029B01B1B52C36D00B7F817 /* MatchIncident.swift */,
+				5029B01E1B52C50200B7F817 /* IncidentType.swift */,
+				5029B0201B52C51C00B7F817 /* IncidentResult.swift */,
+				5029B0221B52C60F00B7F817 /* Player.swift */,
+			);
+			name = domain;
+			sourceTree = "<group>";
+		};
 		508926FC1B4C40270089CCE1 = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +121,7 @@
 		508927071B4C40270089CCE1 /* coachapp */ = {
 			isa = PBXGroup;
 			children = (
+				5029B01D1B52C4D700B7F817 /* domain */,
 				5029B0181B504CD700B7F817 /* viewcontrollers */,
 				5029B0091B50492E00B7F817 /* IncidentRecordView */,
 				50B8DB471B4D82E000495B09 /* FieldView */,
@@ -251,8 +271,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5029B01C1B52C36D00B7F817 /* MatchIncident.swift in Sources */,
+				5029B0211B52C51C00B7F817 /* IncidentResult.swift in Sources */,
 				5029B0141B504C9500B7F817 /* IncidentRecordView.swift in Sources */,
 				5029B0171B504CBB00B7F817 /* GameRecordViewController.swift in Sources */,
+				5029B0231B52C60F00B7F817 /* Player.swift in Sources */,
+				5029B01F1B52C50200B7F817 /* IncidentType.swift in Sources */,
 				5089270B1B4C40270089CCE1 /* AppDelegate.swift in Sources */,
 				5029B0121B504C9500B7F817 /* FieldView.swift in Sources */,
 			);

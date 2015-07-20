@@ -12,10 +12,12 @@ import UIKit
 
     // Our custom view from the XIB file
     weak var view: UIView!
-    @IBOutlet weak var penaltyButton: UIButton!
-    @IBOutlet weak var foulButton: UIButton!
-    @IBOutlet weak var scoreButton: UIButton!
-    @IBOutlet weak var turnOverButton: UIButton!
+    @IBOutlet weak var buttonOne: UIButton!
+    @IBOutlet weak var buttonTwo: UIButton!
+    @IBOutlet weak var buttonThree: UIButton!
+    @IBOutlet weak var buttonFour: UIButton!
+    @IBOutlet weak var buttonFive: UIButton!
+    @IBOutlet weak var buttonSix: UIButton!
     
     override init(frame: CGRect) {
         // 1. setup any properties here
@@ -58,9 +60,22 @@ import UIKit
         return view
     }
 
-    func renderIncidentRecordButtons() {
-        self.penaltyButton.alpha = 1
-        self.penaltyButton.hidden = false
-        self.penaltyButton.enabled = true
+    func getButtonAtPosition(position: Int) -> UIButton {
+        switch(position) {
+        case 0:
+            return buttonOne
+        case 1:
+            return buttonTwo
+        case 2:
+            return buttonThree
+        case 3:
+            return buttonFour
+        case 4:
+            return buttonFive
+        case 5:
+            return buttonSix
+        default:
+            return buttonOne
+        }
     }
 }

@@ -1,3 +1,5 @@
+osx_image: beta-xcode6.3
+sudo: false
 language: objective-c
 before_install:
   - git submodule sync

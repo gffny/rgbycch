@@ -171,11 +171,6 @@
 				<scope>test</scope>
 			</dependency>
 			<dependency>
-				<groupId>CyberArk</groupId>
-				<artifactId>JavaPasswordSDK</artifactId>
-				<version>7.2</version>
-			</dependency>
-			<dependency>
 				<groupId>org.hamcrest</groupId>
 				<artifactId>hamcrest-core</artifactId>
 				<version>${hamcrest.version}</version>
@@ -340,10 +335,6 @@
 			<groupId>org.easytesting</groupId>
 			<artifactId>fest-assert</artifactId>
 			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>CyberArk</groupId>
-			<artifactId>JavaPasswordSDK</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.hamcrest</groupId>

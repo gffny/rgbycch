@@ -57,7 +57,7 @@ import UIKit
         let nib = UINib(nibName: "FieldRepresentation", bundle: bundle)
 
         // Assumes UIView is top level and only object in CustomView.xib file
-        let view = nib.instantiateWithOwner(self, options: nil)[0] as UIView
+        let view = nib.instantiateWithOwner(self, options: nil)[0] as! UIView
         return view
     }
 }

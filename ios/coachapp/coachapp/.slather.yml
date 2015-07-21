@@ -1,0 +1,5 @@
+coverage_service: coveralls
+xcodeproj: coachapp.xcodeproj
+source_directory: coachapp
+ignore:
+  - coachappTests/*

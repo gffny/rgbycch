@@ -1,0 +1,7 @@
+[
+  "-workspace", "coachapp.xcworkspace",
+  "-scheme", "coachapp",
+  "-configuration", "Debug",
+  "-sdk", "iphonesimulator",
+  "-arch", "i386"
+]

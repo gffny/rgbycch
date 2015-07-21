@@ -1,0 +1,4 @@
+<project name="rgbycch" basedir="." default="main">
+<target name="test">
+</target>
+</project>

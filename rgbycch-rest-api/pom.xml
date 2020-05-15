@@ -31,7 +31,7 @@
 		<org.slf4j-version>1.7.5</org.slf4j-version>
 		<ch.qos.logback-version>1.0.13</ch.qos.logback-version>
 		<org.aspectj-version>1.7.4</org.aspectj-version>
-		<jackson-version>2.5.3</jackson-version>
+		<jackson-version>2.11.0</jackson-version>
 		<!-- Have to use Hibernate 4.2.x because we run on WebLogic 12 which is 
 			a JEE6 server, which has JPA 2.0. Hibernate > 4.2 requires JPA 2.1. -->
 		<org.hibernate-entityManager-version>4.2.18.Final</org.hibernate-entityManager-version>

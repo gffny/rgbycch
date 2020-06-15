@@ -36,7 +36,7 @@
 			a JEE6 server, which has JPA 2.0. Hibernate > 4.2 requires JPA 2.1. -->
 		<org.hibernate-entityManager-version>4.2.18.Final</org.hibernate-entityManager-version>
 		<ojdbc7.version>12.1.0.1</ojdbc7.version>
-		<hibernate-validator.version>4.3.2.Final</hibernate-validator.version>
+		<hibernate-validator.version>6.1.5.Final</hibernate-validator.version>
 
 		<org.thymeleaf-version>2.1.4.RELEASE</org.thymeleaf-version>
 

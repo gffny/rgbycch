@@ -24,7 +24,7 @@
 		<jersey.client.version>1.18</jersey.client.version>
 
 		<org.springframework-version>4.1.6.RELEASE</org.springframework-version>
-		<org.springframework.security-version>4.0.1.RELEASE</org.springframework.security-version>
+		<org.springframework.security-version>5.2.10.RELEASE</org.springframework.security-version>
 		<org.springframework.data-jpa-version>1.7.2.RELEASE</org.springframework.data-jpa-version>
 		<org.springframework.spring-cloud-version>1.0.0.RELEASE</org.springframework.spring-cloud-version>
 
